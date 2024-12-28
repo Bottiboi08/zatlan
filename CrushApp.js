@@ -40,7 +40,7 @@ yesBtn.addEventListener('click', function() {
     if (currentQuestionIndex < questions.length) {
         questionText.textContent = questions[currentQuestionIndex];
     } else {
-        questionText.textContent = "Thanks for answering all the questions!";
+        questionText.textContent = "AAAAAAAA3333333 YYEEEEYYYYYY";
         yesBtn.style.display = 'none';
         noBtn.style.display = 'none';
     }
