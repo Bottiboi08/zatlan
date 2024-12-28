@@ -10,6 +10,16 @@ const questionText = document.getElementById('question-text');
 const yesBtn = document.getElementById('yes-btn');
 const noBtn = document.getElementById('no-btn');
 
+// Define the questions
+const questions = [
+    "Do you like me a little bit?",
+    "So do you like me or love me ?",
+    "Berassmiii?",
+    "Would you like to go on a date with mee ?"
+];
+
+let currentQuestionIndex = 0;
+
 // Handle name submission
 submitNameBtn.addEventListener('click', function() {
     const enteredName = nameInput.value.trim();
@@ -17,6 +27,7 @@ submitNameBtn.addEventListener('click', function() {
     if (enteredName.toLowerCase() === correctName.toLowerCase()) {
         nameSection.style.display = 'none';
         questionSection.style.display = 'block';
+        questionText.textContent = questions[currentQuestionIndex];
     } else {
         alert("Sorry, that's not the right name!");
     }
@@ -24,9 +35,15 @@ submitNameBtn.addEventListener('click', function() {
 
 // Handle Yes button click (proceed to next question)
 yesBtn.addEventListener('click', function() {
-    questionText.textContent = "Do you like me?"; // New question
-    yesBtn.textContent = "Yes";
-    noBtn.textContent = "No";
+    currentQuestionIndex++;
+    
+    if (currentQuestionIndex < questions.length) {
+        questionText.textContent = questions[currentQuestionIndex];
+    } else {
+        questionText.textContent = "AAAAAAAAAA333333333 EEEEEEEEEEEEEEEE";
+        yesBtn.style.display = 'none';
+        noBtn.style.display = 'none';
+    }
 });
 
 // Handle No button click (randomly move the No button)
