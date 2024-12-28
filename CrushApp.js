@@ -44,4 +44,3 @@ noBtn.addEventListener('click', function() {
     noBtn.style.left = randomX + 'px';
     noBtn.style.top = randomY + 'px';
 });
-
