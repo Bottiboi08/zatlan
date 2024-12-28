@@ -56,3 +56,8 @@ label {
     font-family: 'Great Vibes', cursive;
     color: #6C3483; /* Darker Violet for text */
 }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    button {
+        font-size
