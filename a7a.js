@@ -12,10 +12,10 @@ const noBtn = document.getElementById('no-btn');
 
 // Define the questions
 const questions = [
-    "Do you like me?",
-    "Would you go on a date with me?",
-    "Am I your type?",
-    "Would you like to hang out sometime?"
+    "Do you like me a little bit?",
+    "So do you like me or love me?",
+    "Berassmiii?",
+    "Would you like to go on a date with me?"
 ];
 
 let currentQuestionIndex = 0; // Track the current question
