@@ -1,0 +1,35 @@
+/* Background Color */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker Green on Hover */
+}
+
+/* Input Field Styles */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+/* Label Styling */
+label {
+    font-size: 18px;
+    color: #333;
+}
