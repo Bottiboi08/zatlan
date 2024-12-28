@@ -1,5 +1,5 @@
 // Define the correct name
-const correctName = "Alex"; // Change this to your crush's name
+const correctName = "Reema"; // Change this to your crush's name
 
 // Get HTML elements
 const nameInput = document.getElementById('name');
