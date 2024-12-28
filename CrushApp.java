@@ -15,7 +15,7 @@ public class CrushApp {
     private static JLabel questionLabel;
     private static JButton yesButton;
     private static JButton noButton;
-    private static String correctName = "YourCrush";  // Change this to your crush's name
+    private static String correctName = "Hsan";  // Change this to your crush's name
 
     public static void main(String[] args) {
         // Set up frame
