@@ -8,10 +8,10 @@ body {
 button {
     background-color: #E6B3FF; /* Light Violet */
     color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
+    font-size: 20px; /* Increased font size */
+    padding: 15px 30px; /* Increased padding */
+    margin: 12px; /* Increased margin */
+    border-radius: 8px; /* Increased border radius */
     border: none;
 }
 
@@ -21,17 +21,17 @@ button:hover {
 
 /* Input Field Styles */
 input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    margin: 10px;
-    border-radius: 5px;
+    padding: 15px; /* Increased padding */
+    font-size: 18px; /* Increased font size */
+    margin: 12px; /* Increased margin */
+    border-radius: 8px; /* Increased border radius */
     border: 2px solid #ccc;
     background-color: #FFF; /* White */
 }
 
 /* Label Styling */
 label {
-    font-size: 18px;
+    font-size: 22px; /* Increased font size */
     color: #333;
 }
 
@@ -55,9 +55,50 @@ label {
 #question-text, #name-section input, #name-section button, #yes-btn, #no-btn {
     font-family: 'Great Vibes', cursive;
     color: #6C3483; /* Darker Violet for text */
+    font-size: 24px; /* Increased font size for the question text */
 }
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
     button {
-        font-size
+        font-size: 18px; /* Larger font size */
+        padding: 12px 24px; /* Larger padding */
+    }
+
+    input[type="text"] {
+        font-size: 18px; /* Larger font size */
+        padding: 12px; /* Larger padding */
+    }
+}
+
+@media (max-width: 768px) {
+    button {
+        font-size: 16px; /* Larger font size */
+        padding: 10px 20px; /* Larger padding */
+    }
+
+    input[type="text"] {
+        font-size: 16px; /* Larger font size */
+        padding: 10px; /* Larger padding */
+    }
+
+    #question-text {
+        font-size: 28px; /* Larger font size */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px; /* Larger font size */
+        padding: 8px 16px; /* Larger padding */
+    }
+
+    input[type="text"] {
+        font-size: 14px; /* Larger font size */
+        padding: 8px; /* Larger padding */
+    }
+
+    #question-text {
+        font-size: 26px; /* Larger font size */
+    }
+}
