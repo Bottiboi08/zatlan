@@ -1,12 +1,12 @@
 /* Background Color */
 body {
-    background-color: #f0f0f0;
+    background-color: #F5E6FF; /* Light Violet */
     font-family: Arial, sans-serif;
 }
 
 /* Button Styles */
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #E6B3FF; /* Light Violet */
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -16,7 +16,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Darker Green on Hover */
+    background-color: #D49EFF; /* Slightly Darker Violet */
 }
 
 /* Input Field Styles */
@@ -26,6 +26,7 @@ input[type="text"] {
     margin: 10px;
     border-radius: 5px;
     border: 2px solid #ccc;
+    background-color: #FFF; /* White */
 }
 
 /* Label Styling */
@@ -48,4 +49,10 @@ label {
 /* Hide the question section initially */
 #question-section {
     display: none;
+}
+
+/* Apply Romantic Font and Colors */
+#question-text, #name-section input, #name-section button, #yes-btn, #no-btn {
+    font-family: 'Great Vibes', cursive;
+    color: #6C3483; /* Darker Violet for text */
 }
