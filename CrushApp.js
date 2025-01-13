@@ -20,34 +20,11 @@ const questions = [
 
 let currentQuestionIndex = 0; // Track the current question
 
-// Handle name submission
-submitNameBtn.addEventListener('click', function() {
-    const enteredName = nameInput.value.trim();
-    
-    if (enteredName.toLowerCase() === correctName.toLowerCase()) {
-        nameSection.style.display = 'none';
-        questionSection.style.display = 'block';
-        questionText.textContent = questions[currentQuestionIndex];
-    } else {
-        alert("Sorry, that's not the right name!");
-    }
-});
+// Initial position of the No button
+const initialNoBtnPosition = { left: noBtn.style.left, top: noBtn.style.top };
 
-// Handle Yes button click (proceed to next question)
-yesBtn.addEventListener('click', function() {
-    currentQuestionIndex++;
-    
-    if (currentQuestionIndex < questions.length) {
-        questionText.textContent = questions[currentQuestionIndex];
-    } else {
-        questionText.textContent = "AAAAAAAA3333333 YYEEEEYYYYYY";
-        yesBtn.style.display = 'none';
-        noBtn.style.display = 'none';
-    }
-});
-
-// Handle No button click (randomly move the No button)
-noBtn.addEventListener('click', function() {
+// Function to move the No button to a random position
+function moveNoBtnRandomly() {
     const container = document.querySelector('.container');
     const containerRect = container.getBoundingClientRect();
     
@@ -60,4 +37,37 @@ noBtn.addEventListener('click', function() {
     noBtn.style.position = 'absolute';
     noBtn.style.left = randomX + 'px';
     noBtn.style.top = randomY + 'px';
+}
+
+// Handle name submission
+submitNameBtn.addEventListener('click', function() {
+    const enteredName = nameInput.value.trim();
+    
+    if (enteredName.toLowerCase() === correctName.toLowerCase()) {
+        nameSection.style.display = 'none';
+        questionSection.style.display = 'block';
+        questionText.textContent = questions[currentQuestionIndex];
+        moveNoBtnRandomly(); // Move the No button randomly when the question section is shown
+    } else {
+        alert("Sorry, that's not the right name!");
+    }
+});
+
+// Handle Yes button click (proceed to next question)
+yesBtn.addEventListener('click', function() {
+    currentQuestionIndex++;
+    
+    if (currentQuestionIndex < questions.length) {
+        questionText.textContent = questions[currentQuestionIndex];
+        moveNoBtnRandomly(); // Move the No button randomly for the next question
+    } else {
+        questionText.textContent = "AAAAAAAA3333333 YYEEEEYYYYYY";
+        yesBtn.style.display = 'none';
+        noBtn.style.display = 'none';
+    }
+});
+
+// Handle No button click (randomly move the No button)
+noBtn.addEventListener('click', function() {
+    moveNoBtnRandomly(); // Move the No button to a random position on click
 });
