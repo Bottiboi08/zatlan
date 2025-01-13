@@ -20,9 +20,6 @@ const questions = [
 
 let currentQuestionIndex = 0; // Track the current question
 
-// Initial position of the No button
-const initialNoBtnPosition = { left: noBtn.style.left, top: noBtn.style.top };
-
 // Function to move the No button to a random position
 function moveNoBtnRandomly() {
     const container = document.querySelector('.container');
@@ -37,6 +34,13 @@ function moveNoBtnRandomly() {
     noBtn.style.position = 'absolute';
     noBtn.style.left = randomX + 'px';
     noBtn.style.top = randomY + 'px';
+}
+
+// Set initial position of the No button next to the Yes button
+function setInitialNoBtnPosition() {
+    noBtn.style.position = 'relative';
+    noBtn.style.left = '10px';
+    noBtn.style.top = '0';
 }
 
 // Handle name submission
@@ -59,6 +63,7 @@ yesBtn.addEventListener('click', function() {
     
     if (currentQuestionIndex < questions.length) {
         questionText.textContent = questions[currentQuestionIndex];
+        setInitialNoBtnPosition(); // Reset the No button to its initial position
         moveNoBtnRandomly(); // Move the No button randomly for the next question
     } else {
         questionText.textContent = "AAAAAAAA3333333 YYEEEEYYYYYY";
@@ -67,7 +72,9 @@ yesBtn.addEventListener('click', function() {
     }
 });
 
-// Handle No button click (randomly move the No button)
-noBtn.addEventListener('click', function() {
-    moveNoBtnRandomly(); // Move the No button to a random position on click
-});
+// Handle No button click and mouseover (randomly move the No button)
+noBtn.addEventListener('click', moveNoBtnRandomly);
+noBtn.addEventListener('mouseover', moveNoBtnRandomly);
+
+// Set the initial position of the No button when the page loads
+setInitialNoBtnPosition();
